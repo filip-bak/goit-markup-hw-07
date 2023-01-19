@@ -178,7 +178,7 @@ ul {
 .link--active {
   transition: var(--transition-color);
 }
-.center {
+.text-center {
   text-align: center;
 }
 .section {
@@ -195,6 +195,33 @@ ul {
 }
 .section--large {
   padding: 21.345vh 0;
+}
+
+/* || TYPOGRAPHY */
+/* | TITLES */
+.title--primary {
+  font-size: 2.75rem;
+  font-weight: 900;
+  line-height: 1.364;
+  letter-spacing: 0.06em;
+}
+.title--secondary {
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1.167;
+  letter-spacing: 0.03em;
+}
+.title--section {
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.143;
+  letter-spacing: 0.03em;
+}
+/* | TEXT */
+.text--description {
+  font-size: 14px;
+  line-height: 1.714;
+  letter-spacing: 0.03em;
 }
 
 /* || PSEUDO CLASSES */
@@ -328,25 +355,6 @@ body {
 .banner__button {
   transition: var(--transition-button-primary);
 }
-/* | TITLES */
-.title--primary {
-  font-size: 2.75rem;
-  font-weight: 900;
-  line-height: 1.364;
-  letter-spacing: 0.06em;
-}
-.title--secondary {
-  font-size: 2.25rem;
-  font-weight: 700;
-  line-height: 1.167;
-  letter-spacing: 0.03em;
-}
-.title--section {
-  font-size: 0.875rem;
-  font-weight: 700;
-  line-height: 1.143;
-  letter-spacing: 0.03em;
-}
 
 /* | BUTTONS */
 .button--primary {
@@ -393,7 +401,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 30px;
+}
+.skill__item {
+  width: min-content;
 }
 .skill__background {
   display: inline-flex;
@@ -413,9 +425,6 @@ body {
 }
 .skill__description {
   color: var(--font-color-p);
-  font-size: 0.875rem;
-  line-height: 1.714;
-  letter-spacing: 0.03em;
 }
 
 /* | ABOUT US */
@@ -426,6 +435,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 30px;
 }
 .about-us__item {
@@ -434,10 +444,9 @@ body {
 .about-us__background {
   position: absolute;
   bottom: 0;
-  left: 0;
-  right: 0;
 
-  padding: 27px 90px;
+  width: 100%;
+  padding: 27px 0;
 
   background-color: var(--bgcolor-about-us-title);
 }
@@ -448,7 +457,6 @@ body {
 
 /* | TEAM */
 .team {
-  width: 100%;
   background-color: var(--bgcolor-fade);
 }
 .team__title {
@@ -458,6 +466,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 30px;
 }
 .team__item {
@@ -526,6 +535,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 30px;
 }
 .client__link {
@@ -563,7 +573,9 @@ body {
 }
 .footer__grid {
   display: flex;
+  justify-content: center;
   align-items: baseline;
+  flex-wrap: wrap;
 }
 .footer__item {
   display: flex;
@@ -594,11 +606,6 @@ body {
 
   font-style: normal;
 }
-.address__list {
-  font-size: 14px;
-  line-height: 1.714;
-  letter-spacing: 0.03em;
-}
 .address__item:not(:last-child) {
   margin-bottom: 9px;
 }
@@ -614,7 +621,7 @@ body {
   display: flex;
   gap: 12px;
 }
-.newsletter__input--email {
+.newsletter__input {
   width: 358px;
   height: 50px;
   padding-left: 16px;
@@ -628,11 +635,11 @@ body {
 
   transition: var(--transition-border-color);
 }
-.newsletter__input--email:focus {
+.newsletter__input:focus {
   border-color: var(--border-color-newsletter-input-footer);
   outline: 0;
 }
-.newsletter__input--email::placeholder {
+.newsletter__input::placeholder {
   color: var(--font-color-placeholder-footer);
 }
 .newsletter__button {
@@ -814,8 +821,8 @@ body {
 
 .modal__button--close {
   position: absolute;
-  right: 8px;
   top: 8px;
+  right: 8px;
 
   display: flex;
 
@@ -880,12 +887,11 @@ body {
   position: relative;
 }
 .form__input {
-  /* box model */
   display: block;
   width: 100%;
   height: 40px;
   padding-left: 42px;
-  /* border */
+
   border: var(--border-form-input);
   border-radius: 4px;
 
@@ -895,11 +901,11 @@ body {
   position: absolute;
   top: 11.5px;
   left: 16px;
-  z-index: 2;
 
   fill: var(--svg-fill-form-contact);
   transition: var(--transition-fill);
 }
+
 .form__comment {
   padding: 12px 16px;
   height: 120px;
@@ -923,13 +929,10 @@ body {
 
   pointer-events: none;
 }
-.form__terms--text {
+.form__text {
   margin-left: 8px;
 
   color: var(--font-color-form-terms);
-  font-size: 14px;
-  line-height: 1.714;
-  letter-spacing: 0.03em;
 }
 .form__link {
   color: var(--font-color-form-link);
@@ -955,8 +958,9 @@ body {
 }
 
 /* CHECKBOX */
-.form__checkbox--icon {
+.checkbox {
   position: relative;
+  top: -1px;
 
   display: block;
   width: 16px;
@@ -968,15 +972,15 @@ body {
   pointer-events: auto;
   cursor: pointer;
 }
-.form__checkbox:checked + .form__terms .form__checkbox--icon {
+.form__checkbox:checked + .form__terms .checkbox {
   background-color: var(--bgcolor-form-checkbox);
 
   border: none;
 }
-.form__checkbox + .form__terms .checkmark__svg {
+.form__checkbox + .form__terms .checkbox__svg {
   display: none;
 }
-.form__checkbox:checked + .form__terms .checkmark__svg {
+.form__checkbox:checked + .form__terms .checkbox__svg {
   position: absolute;
   top: 1px;
   left: 2px;
@@ -995,20 +999,3 @@ body {
 .form__input:-webkit-autofill:focus {
   transition: background-color 5000s 0s, color 5000s 0s;
 } */
-
-/* OPTION WITH 2 SVGs  */
-/* .form__checkbox + .form__terms check-off__svg {
-  position: absolute;
-  display: block;
-  width: 16px;
-  height: 15px;
-  border: 2px solid black;
-  border-radius: 2px;
-} */
-/* .check-on__svg {
-  display: none;
-}
-.form__checkbox:checked + .form__terms .check-on__svg {
-  position: absolute;
-  display: block;
-}*/
