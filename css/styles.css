@@ -166,8 +166,15 @@ ul {
   --transition-button-primary: var(--transition-bgcolor);
   --transition-button-secondary: var(--transition-bgcolor),
     var(--transition-color), var(--transition-shadow);
+
+  /* | modal */
   --transition-modal: transform 700ms cubic-bezier(0.25, 0.46, 0.45, 0.94),
     border-radius 1000ms ease-out, visibility 700ms linear, opacity 600ms linear;
+  --transition-modal-transform: transform 1000ms
+    cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --transition-modal-visible: visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-modal-opacity: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-modal-border-radius: border-radius 1000ms ease-out;
 }
 
 /* || UTILITY CLASSES */
@@ -516,10 +523,11 @@ body {
   transition: var(--transition-fill);
 }
 /* social hover/focus*/
-.social__logo:is(:hover, :focus) {
+.social__logo:is(:hover, :focus):not(.footer .social__logo) {
   background-color: var(--bgcolor-social-hover);
 }
 /* social icon hover/focus */
+/* .social__svg:not(.footer .social__svg) */
 .social__logo:is(:hover, :focus) .social__svg:not(.footer .social__svg) {
   fill: var(--svg-fill-social-hover);
 }
@@ -741,7 +749,8 @@ body {
 /* || MODAL */
 .backdrop {
   position: fixed;
-  inset: 0;
+  top: 0;
+  z-index: 10;
 
   display: flex;
   align-items: center;
@@ -752,73 +761,32 @@ body {
 
   background-color: rgba(0, 0, 0, 0.2);
 
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-
-  transition: var(--transition-modal);
-
-  /* (need more js) */
-  /* animation: Open 500ms linear alternate forwards; */
-}
-.modal {
-  position: absolute;
-
-  padding: 40px;
-  width: 528px;
-
-  background-color: var(--bgcolor-modal);
-  border-radius: 4px;
-
-  box-shadow: var(--shadow-modal);
+  transition: var(--transition-modal-opacity), var(--transition-modal-visible);
+  transition-duration: 600ms;
 }
 .is-hidden {
   pointer-events: none;
   visibility: hidden;
   opacity: 0;
-
-  border-bottom-left-radius: 50%;
-  border-bottom-right-radius: 50%;
-  transform: translateY(-100%);
-
-  /* need more js */
-  /* animation: Close 500ms linear alternate forwards; */
 }
 
-/* Need more JavaScript */
-/* @keyframes Open {
-  0% {
-    transform: translateY(-100%);
-    border-bottom-left-radius: 50%;
-    border-bottom-right-radius: 50%;
-    visibility: hidden;
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    visibility: visible;
-    opacity: 1;
-  }
-}
-@keyframes Close {
-  0% {
-    transform: translateY(0);
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    visibility: visible;
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-100%);
-    border-bottom-left-radius: 50%;
-    border-bottom-right-radius: 50%;
-    visibility: hidden;
-    opacity: 0;
-  }
-} */
+.modal {
+  position: relative;
+  padding: 40px;
+  z-index: 100;
 
+  background-color: var(--bgcolor-modal);
+  border-radius: 4px;
+  box-shadow: var(--shadow-modal);
+
+  transform: translateY(0);
+  transition: transform 600ms 500ms cubic-bezier(0, 0, 0.2, 1);
+}
+.is-hidden .modal {
+  transform: translateY(-110vh);
+  scale: 0.7;
+  transition: transform 500ms 100ms ease-in, scale 300ms ease-out;
+}
 .modal__button--close {
   position: absolute;
   top: 8px;
