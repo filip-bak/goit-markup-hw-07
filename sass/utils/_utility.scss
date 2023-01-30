@@ -1,0 +1,51 @@
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+.link--active {
+    transition: var(--transition-color);
+}
+.text-center {
+    text-align: center;
+}
+.link--no-decoration,
+.logo--no-decoration {
+    color: inherit;
+    text-decoration: none;
+}
+.img--block {
+    display: block;
+}
+.section {
+    padding: 94px 0;
+}
+.section--top {
+    padding-bottom: 0;
+}
+.section--small {
+    padding: 24px 0;
+}
+.section--medium {
+    padding: 60px 0;
+}
+.section--large {
+    padding: 21.345vh 0;
+}
+.page-active {
+    position: relative;
+}
+.page-active::after {
+    content: "";
+    position: absolute;
+    bottom: -31.3px;
+    left: 0;
+
+    width: 100%;
+    height: 4px;
+
+    background-color: var(--bgcolor-page-active);
+    border-radius: 2px;
+}
+.link--active:is(:hover, :focus) {
+    color: var(--font-color-hover);
+}

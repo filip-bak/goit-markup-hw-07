@@ -1,0 +1,34 @@
+.social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.social__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 44px;
+    height: 44px;
+
+    border-radius: 50%;
+
+    transition: var(--transition-bgcolor);
+}
+.social__svg {
+    fill: var(--svg-fill-social);
+    transition: var(--transition-fill);
+}
+/* social hover/focus*/
+.social__logo:is(:hover, :focus):not(.footer .social__logo) {
+    background-color: var(--bgcolor-social-hover);
+}
+/* social icon hover/focus */
+/* .social__svg:not(.footer .social__svg) */
+.social__logo:is(:hover, :focus) .social__svg:not(.footer .social__svg) {
+    fill: var(--svg-fill-social-hover);
+}
+.footer .social__logo:is(:hover, :focus) {
+    background-color: var(--bgcolor-social-footer-hover);
+}

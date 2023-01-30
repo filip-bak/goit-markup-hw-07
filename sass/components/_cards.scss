@@ -1,0 +1,62 @@
+.card__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.card__item {
+    transition: var(--transition-shadow);
+}
+.card__info {
+    padding: 20px 0 20px 24px;
+
+    border-left: var(--border-card-item);
+    border-right: var(--border-card-item);
+    border-bottom: var(--border-card-item);
+}
+.card__title {
+    margin-bottom: 4px;
+
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 2;
+    letter-spacing: 0.06em;
+}
+.card__type {
+    color: var(--font-color-p);
+    font-size: 1rem;
+    line-height: 1.875;
+    letter-spacing: 0.03em;
+}
+.card__container {
+    position: relative;
+    overflow: hidden;
+}
+.card__background {
+    position: absolute;
+    inset: 0;
+
+    padding: 49px 45px 49px 24px;
+
+    background-color: var(--bgcolor-card-background);
+
+    transition: var(--transition-transform);
+    transform: translateY(101%);
+    pointer-events: none;
+}
+.card__description {
+    color: var(--font-color-card-description);
+
+    font-size: 1.125rem;
+    line-height: 1.556;
+    letter-spacing: 0.03em;
+}
+/* card hover */
+.card__item:hover .card__background {
+    transform: translateY(0);
+    pointer-events: auto;
+}
+.card__item:hover {
+    box-shadow: var(--shadow-card-item-hover);
+}

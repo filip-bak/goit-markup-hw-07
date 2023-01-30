@@ -1,0 +1,16 @@
+.logo {
+    font-family: var(--ff-logo);
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.192;
+    letter-spacing: 0.03em;
+}
+.logo__part {
+    color: var(--font-color-logo-primary);
+}
+.logo__part--light {
+    color: var(--font-color-logo-part-light);
+}
+.logo__part--dark {
+    color: var(--font-color-logo-part-dark);
+}

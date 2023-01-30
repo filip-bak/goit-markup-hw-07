@@ -1,0 +1,56 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-color: rgba(0, 0, 0, 0.2);
+
+    transition: var(--transition-backdrop);
+}
+.is-hidden {
+    pointer-events: none;
+    visibility: hidden;
+    opacity: 0;
+}
+.modal {
+    position: relative;
+    padding: 40px;
+
+    background-color: var(--bgcolor-modal);
+    box-shadow: var(--shadow-modal);
+    border-radius: 4px;
+
+    transform: translateY(0);
+
+    transition: var(--transition-modal-open);
+}
+.is-hidden .modal {
+    scale: 0.7;
+    transform: translateY(-110vh);
+
+    transition: var(--transition-modal-close);
+}
+.modal__button--close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+
+    display: flex;
+
+    padding: 10px;
+
+    background-color: var(--bgcolor-button-form-close);
+    border: var(--border-form-button-close);
+    border-radius: 50%;
+
+    cursor: pointer;
+}
+.modal__svg-close {
+    fill: black;
+}

@@ -1,0 +1,29 @@
+.skill__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.skill__item {
+    width: min-content;
+}
+.skill__background {
+    display: inline-flex;
+
+    margin-bottom: 30px;
+    padding: 25px 100px;
+
+    background-color: var(--bgcolor-skill-svg);
+    border-radius: 4px;
+}
+.skill__svg {
+    fill: var(--svg-fill-skill);
+    color: var(--svg-fill-skill-detail);
+}
+.skill__title {
+    margin-bottom: 10px;
+}
+.skill__description {
+    color: var(--font-color-p);
+}

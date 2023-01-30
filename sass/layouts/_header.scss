@@ -1,0 +1,9 @@
+.header {
+    border-bottom: var(--border-header);
+}
+.header__grid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}

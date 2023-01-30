@@ -1,0 +1,14 @@
+.address {
+    margin-top: 20px;
+
+    font-style: normal;
+}
+.address__item:not(:last-child) {
+    margin-bottom: 9px;
+}
+.address__link {
+    color: var(--font-color-contact-footer);
+}
+.address__link--street {
+    color: var(--font-color-street-footer);
+}

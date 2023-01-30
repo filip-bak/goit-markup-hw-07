@@ -1,0 +1,15 @@
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 50px;
+}
+.menu__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.menu__button {
+    transition: var(--transition-button-secondary);
+}

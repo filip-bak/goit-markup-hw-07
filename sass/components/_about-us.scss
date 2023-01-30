@@ -1,0 +1,26 @@
+.about-us__title {
+    margin-bottom: 50px;
+}
+.about-us__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.about-us__item {
+    position: relative;
+}
+.about-us__background {
+    position: absolute;
+    bottom: 0;
+
+    width: 100%;
+    padding: 27px 0;
+
+    background-color: var(--bgcolor-about-us-title);
+}
+.about-us__subtitle {
+    color: var(--font-color-about-us-title);
+    text-transform: uppercase;
+}
