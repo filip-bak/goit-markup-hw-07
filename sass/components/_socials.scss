@@ -1,34 +1,42 @@
+@use "../utils/mixins" as m;
 .social {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include m.flexbox($justify: center, $align: center);
     gap: 10px;
-}
-.social__logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
-    width: 44px;
-    height: 44px;
+    // logo == link
+    &__logo {
+        @include m.flexbox($justify: center, $align: center);
 
-    border-radius: 50%;
+        width: 44px;
+        height: 44px;
 
-    transition: var(--transition-bgcolor);
-}
-.social__svg {
-    fill: var(--svg-fill-social);
-    transition: var(--transition-fill);
-}
-/* social hover/focus*/
-.social__logo:is(:hover, :focus):not(.footer .social__logo) {
-    background-color: var(--bgcolor-social-hover);
-}
-/* social icon hover/focus */
-/* .social__svg:not(.footer .social__svg) */
-.social__logo:is(:hover, :focus) .social__svg:not(.footer .social__svg) {
-    fill: var(--svg-fill-social-hover);
-}
-.footer .social__logo:is(:hover, :focus) {
-    background-color: var(--bgcolor-social-footer-hover);
+        border-radius: 50%;
+
+        transition: var(--transition-bgcolor);
+    }
+    &__logo--is-background {
+        background-color: var(--bgcolor-social-footer);
+
+        &:is(:hover, :focus) {
+            background-color: var(--bgcolor-social-footer-hover);
+        }
+    }
+    &__svg {
+        fill: var(--svg-fill-social);
+        transition: var(--transition-fill);
+    }
+    &__svg--light {
+        fill: var(--svg-fill-social-footer);
+    }
+
+    &__logo:is(:hover, :focus) {
+        // social active ( - footer)
+        &:not(.social__logo--is-background) {
+            background-color: var(--bgcolor-social-hover);
+        }
+        // social icon active ( - footer)
+        .social__svg:not(.social__svg--light) {
+            fill: var(--svg-fill-social-hover);
+        }
+    }
 }

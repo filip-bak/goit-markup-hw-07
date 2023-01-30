@@ -1,26 +1,27 @@
-.about-us__title {
-    margin-bottom: 50px;
-}
-.about-us__list {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
-}
-.about-us__item {
-    position: relative;
-}
-.about-us__background {
-    position: absolute;
-    bottom: 0;
+@use "../utils/mixins" as m;
 
-    width: 100%;
-    padding: 27px 0;
+.about-us {
+    &__title {
+        margin-bottom: 50px;
+    }
+    &__list {
+        @include m.flexbox($justify: center, $align: center);
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    &__item {
+        @include m.position(relative);
+    }
+    &__background {
+        @include m.position(absolute, $bottom: 0);
 
-    background-color: var(--bgcolor-about-us-title);
-}
-.about-us__subtitle {
-    color: var(--font-color-about-us-title);
-    text-transform: uppercase;
+        width: 100%;
+        padding-block: 27px;
+
+        background-color: var(--bgcolor-about-us-title);
+    }
+    &__subtitle {
+        color: var(--font-color-about-us-title);
+        text-transform: uppercase;
+    }
 }

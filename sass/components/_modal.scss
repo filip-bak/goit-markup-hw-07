@@ -1,10 +1,9 @@
-.backdrop {
-    position: fixed;
-    top: 0;
+@use "../utils/mixins" as m;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.backdrop {
+    @include m.position(fixed, $top: 0);
+
+    @include m.flexbox($justify: center, $align: center);
 
     width: 100vw;
     height: 100vh;
@@ -19,8 +18,10 @@
     opacity: 0;
 }
 .modal {
-    position: relative;
+    @include m.position(relative);
+
     padding: 40px;
+    width: 528px;
 
     background-color: var(--bgcolor-modal);
     box-shadow: var(--shadow-modal);
@@ -35,22 +36,4 @@
     transform: translateY(-110vh);
 
     transition: var(--transition-modal-close);
-}
-.modal__button--close {
-    position: absolute;
-    top: 8px;
-    right: 8px;
-
-    display: flex;
-
-    padding: 10px;
-
-    background-color: var(--bgcolor-button-form-close);
-    border: var(--border-form-button-close);
-    border-radius: 50%;
-
-    cursor: pointer;
-}
-.modal__svg-close {
-    fill: black;
 }

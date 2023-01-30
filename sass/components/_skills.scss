@@ -1,29 +1,31 @@
-.skill__list {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
-}
-.skill__item {
-    width: min-content;
-}
-.skill__background {
-    display: inline-flex;
+@use "../utils/mixins" as m;
 
-    margin-bottom: 30px;
-    padding: 25px 100px;
+.skill {
+    &__list {
+        @include m.flexbox($justify: center, $align: center);
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    &__item {
+        width: 270px;
+    }
+    &__background {
+        @include m.flexbox($justify: center);
 
-    background-color: var(--bgcolor-skill-svg);
-    border-radius: 4px;
-}
-.skill__svg {
-    fill: var(--svg-fill-skill);
-    color: var(--svg-fill-skill-detail);
-}
-.skill__title {
-    margin-bottom: 10px;
-}
-.skill__description {
-    color: var(--font-color-p);
+        margin-bottom: 30px;
+        padding-block: 25px;
+
+        background-color: var(--bgcolor-skill-svg);
+        border-radius: 4px;
+    }
+    &__svg {
+        fill: var(--svg-fill-skill);
+        color: var(--svg-fill-skill-detail);
+    }
+    &__title {
+        margin-bottom: 10px;
+    }
+    &__description {
+        color: var(--font-color-p);
+    }
 }

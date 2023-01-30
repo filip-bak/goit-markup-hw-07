@@ -1,62 +1,65 @@
-.card__list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-}
-.card__item {
-    transition: var(--transition-shadow);
-}
-.card__info {
-    padding: 20px 0 20px 24px;
+@use "../utils/mixins" as m;
 
-    border-left: var(--border-card-item);
-    border-right: var(--border-card-item);
-    border-bottom: var(--border-card-item);
-}
-.card__title {
-    margin-bottom: 4px;
+.card {
+    &__list {
+        @include m.flexbox($justify: center, $align: center);
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    &__item {
+        transition: var(--transition-shadow);
 
-    font-size: 1.125rem;
-    font-weight: 700;
-    line-height: 2;
-    letter-spacing: 0.06em;
-}
-.card__type {
-    color: var(--font-color-p);
-    font-size: 1rem;
-    line-height: 1.875;
-    letter-spacing: 0.03em;
-}
-.card__container {
-    position: relative;
-    overflow: hidden;
-}
-.card__background {
-    position: absolute;
-    inset: 0;
+        &:hover {
+            box-shadow: var(--shadow-card-item-hover);
 
-    padding: 49px 45px 49px 24px;
+            & .card__overlay {
+                transform: translateY(0);
+                pointer-events: auto;
+            }
+        }
+    }
+    &__info {
+        padding: 20px 0 20px 24px;
 
-    background-color: var(--bgcolor-card-background);
+        border-left: var(--border-card-item);
+        border-right: var(--border-card-item);
+        border-bottom: var(--border-card-item);
+    }
+    &__title {
+        margin-bottom: 4px;
 
-    transition: var(--transition-transform);
-    transform: translateY(101%);
-    pointer-events: none;
-}
-.card__description {
-    color: var(--font-color-card-description);
+        font-size: 1.125rem;
+        font-weight: 700;
+        line-height: 2;
+        letter-spacing: 0.06em;
+    }
+    &__type {
+        color: var(--font-color-p);
+        font-size: 1rem;
+        line-height: 1.875;
+        letter-spacing: 0.03em;
+    }
+    &__container {
+        position: relative;
+        overflow: hidden;
+    }
+    &__overlay {
+        @include m.position(absolute, $top: 0, $bottom: 0);
 
-    font-size: 1.125rem;
-    line-height: 1.556;
-    letter-spacing: 0.03em;
-}
-/* card hover */
-.card__item:hover .card__background {
-    transform: translateY(0);
-    pointer-events: auto;
-}
-.card__item:hover {
-    box-shadow: var(--shadow-card-item-hover);
+        padding: 49px 45px 49px 24px;
+
+        background-color: var(--bgcolor-card-background);
+
+        transform: translateY(101%);
+        pointer-events: none;
+
+        transition: var(--transition-transform);
+    }
+    &__description {
+        color: var(--font-color-card-description);
+
+        font-size: 1.125rem;
+        line-height: 1.556;
+        letter-spacing: 0.03em;
+    }
 }

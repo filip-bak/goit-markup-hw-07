@@ -8,10 +8,11 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-}
-.banner__title {
-    margin-bottom: 30px;
-}
-.banner__button {
-    transition: var(--transition-button-primary);
+
+    &__title {
+        margin-bottom: 30px;
+    }
+    &__button {
+        transition: var(--transition-button-primary);
+    }
 }

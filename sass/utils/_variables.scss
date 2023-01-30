@@ -60,7 +60,8 @@
     --svg-fill-form-contact-hover: #2196f3;
     --svg-fill-form-checkmark: #fff;
 
-    --svg-fill-newsletter-footer: #fff;
+    --svg-fill-button-close: #000;
+    --svg-fill-button-send: #fff;
 
     /* | BUTTON COLORS */
     --font-color-button-primary: #fff;
@@ -100,7 +101,7 @@
     --bgcolor-button-secondary: #f5f4fa;
     --bgcolor-button-secondary-hover: #2196f3;
 
-    --bgcolor-button-form-close: #fff;
+    --bgcolor-button-close: #fff;
 
     /* || BORDERS */
     --border-header: 1px solid #ececec;
@@ -113,7 +114,7 @@
     --border-form-input: 1px solid #21212133;
     --border-color-form-input-focus: #2196f3;
 
-    --border-form-button-close: 1px solid #0000001a;
+    --border-button-close: 1px solid #0000001a;
 
     --border-form-checkmark: 2px solid #212121;
 
@@ -138,8 +139,10 @@
     --transition-transform: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     --transition-border-color: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     --transition-fill: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-button-primary: var(--transition-bgcolor);
-    --transition-button-secondary: var(--transition-bgcolor), var(--transition-color), var(--transition-shadow);
+    --transition-button-primary: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-button-secondary: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-button-text-secondary: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     /* | modal */
     --transition-modal-open: transform 600ms 400ms cubic-bezier(0, 0, 0.2, 1);
