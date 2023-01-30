@@ -11,7 +11,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/modern-normalize.css" />
-    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
     <title>WebStudio</title>
   </head>
 
@@ -82,12 +82,8 @@
             EFEKTYWNE ROZWIĄZANIA<br />
             DLA WASZEGO BIZNESU
           </h1>
-          <button
-            class="banner__button button--primary button__text--primary"
-            type="button"
-            data-modal-open
-          >
-            Zamów usługe
+          <button class="button" type="button" data-modal-open>
+            <span class="button__text">Zamów usługe</span>
           </button>
         </div>
       </section>
@@ -472,29 +468,45 @@
           <p class="footer__title title--section">Dołącz do nas</p>
           <ul class="social">
             <li class="social__box">
-              <a class="social__logo" href="#">
-                <svg class="social__svg" width="20" height="20">
+              <a class="social__logo social__logo--is-background" href="#">
+                <svg
+                  class="social__svg social__svg--light"
+                  width="20"
+                  height="20"
+                >
                   <use href="./images/icons.svg#icon--instagram"></use>
                 </svg>
               </a>
             </li>
             <li class="social__box">
-              <a class="social__logo" href="#">
-                <svg class="social__svg" width="20" height="20">
+              <a class="social__logo social__logo--is-background" href="#">
+                <svg
+                  class="social__svg social__svg--light"
+                  width="20"
+                  height="20"
+                >
                   <use href="./images/icons.svg#icon--twitter"></use>
                 </svg>
               </a>
             </li>
             <li class="social__box">
-              <a class="social__logo" href="#">
-                <svg class="social__svg" width="20" height="20">
+              <a class="social__logo social__logo--is-background" href="#">
+                <svg
+                  class="social__svg social__svg--light"
+                  width="20"
+                  height="20"
+                >
                   <use href="./images/icons.svg#icon--facebook"></use>
                 </svg>
               </a>
             </li>
             <li class="social__box">
-              <a class="social__logo" href="#">
-                <svg class="social__svg" width="20" height="20">
+              <a class="social__logo social__logo--is-background" href="#">
+                <svg
+                  class="social__svg social__svg--light"
+                  width="20"
+                  height="20"
+                >
                   <use href="./images/icons.svg#icon--linkedin"></use>
                 </svg>
               </a>
@@ -510,12 +522,9 @@
               placeholder="E-mail"
               type="email"
             />
-            <button
-              class="newsletter__button button--primary button__text--primary"
-              type="submit"
-            >
-              Zapisz się
-              <svg class="newsletter__svg" width="24px" height="24px">
+            <button class="button button--grid" type="submit">
+              <span class="button__text">Zapisz się</span>
+              <svg class="button__svg" width="24px" height="24px">
                 <use href="./images/icons.svg#icon-send"></use>
               </svg>
             </button>
@@ -605,17 +614,14 @@
               </label>
             </li>
             <li class="form__item">
-              <button
-                class="form__button button--primary button__text--primary"
-                type="submit"
-              >
-                Wyślij
+              <button class="button" type="submit">
+                <span class="button__text">Wyślij</span>
               </button>
             </li>
           </ul>
         </form>
-        <button class="modal__button--close" type="button" data-modal-close>
-          <svg class="modal__svg-close" width="11" height="11">
+        <button class="button-close" type="button" data-modal-close>
+          <svg class="button-close__svg" width="11" height="11">
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
         </button>
