@@ -11,7 +11,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/modern-normalize.css" />
-    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
     <title>WebStudio</title>
   </head>
 
@@ -78,49 +78,40 @@
       <div class="menu container">
         <ul class="menu__list">
           <li class="menu__item">
-            <button
-              class="menu__button button--secondary button__text--secondary button--all"
-              type="button"
-            >
-              Wszystkie
+            <button class="button button--secondary" type="button">
+              <span class="button__text button__text--secondary"
+                >Wszystkie</span
+              >
             </button>
           </li>
           <li class="menu__item">
-            <button
-              class="menu__button button--secondary button__text--secondary button--pages"
-              type="button"
-            >
-              Strony
+            <button class="button button--secondary" type="button">
+              <span class="button__text button__text--secondary">Strony</span>
             </button>
           </li>
           <li class="menu__item">
-            <button
-              class="menu__button button--secondary button__text--secondary button--apps"
-              type="button"
-            >
-              Aplikacje
+            <button class="button button--secondary" type="button">
+              <span class="button__text button__text--secondary"
+                >Aplikacje</span
+              >
             </button>
           </li>
           <li class="menu__item">
-            <button
-              class="menu__button button--secondary button__text--secondary button--design"
-              type="button"
-            >
-              Dizajn
+            <button class="button button--secondary" type="button">
+              <span class="button__text button__text--secondary">Dizajn</span>
             </button>
           </li>
           <li class="menu__item">
-            <button
-              class="menu__button button--secondary button__text--secondary button--marketing"
-              type="button"
-            >
-              Marketing
+            <button class="button button--secondary" type="button">
+              <span class="button__text button__text--secondary"
+                >Marketing</span
+              >
             </button>
           </li>
         </ul>
       </div>
 
-      <section class="cards">
+      <section class="card">
         <div class="container">
           <ul class="card__list">
             <li class="card__item">
@@ -132,7 +123,7 @@
                   width="370"
                   height="294"
                 />
-                <div class="card__background">
+                <div class="card__overlay">
                   <p class="card__description">
                     Technocrack jest popularną platformą wykorzystywaną do
                     rozpowszechniania koronawirusa. Firmy wykorzystują tę
@@ -155,7 +146,7 @@
                   width="370"
                   height="294"
                 />
-                <div class="card__background">
+                <div class="card__overlay">
                   <p class="card__description">
                     Technocrack jest popularną platformą wykorzystywaną do
                     rozpowszechniania koronawirusa. Firmy wykorzystują tę
@@ -178,7 +169,7 @@
                   width="370"
                   height="294"
                 />
-                <div class="card__background">
+                <div class="card__overlay">
                   <p class="card__description">
                     Technocrack jest popularną platformą wykorzystywaną do
                     rozpowszechniania koronawirusa. Firmy wykorzystują tę
@@ -201,7 +192,7 @@
                   width="370"
                   height="294"
                 />
-                <div class="card__background">
+                <div class="card__overlay">
                   <p class="card__description">
                     Technocrack jest popularną platformą wykorzystywaną do
                     rozpowszechniania koronawirusa. Firmy wykorzystują tę
@@ -224,7 +215,7 @@
                   width="370"
                   height="294"
                 />
-                <div class="card__background">
+                <div class="card__overlay">
                   <p class="card__description">
                     Technocrack jest popularną platformą wykorzystywaną do
                     rozpowszechniania koronawirusa. Firmy wykorzystują tę
@@ -247,7 +238,7 @@
                   width="370"
                   height="294"
                 />
-                <div class="card__background">
+                <div class="card__overlay">
                   <p class="card__description">
                     Technocrack jest popularną platformą wykorzystywaną do
                     rozpowszechniania koronawirusa. Firmy wykorzystują tę
@@ -270,7 +261,7 @@
                   width="370"
                   height="294"
                 />
-                <div class="card__background">
+                <div class="card__overlay">
                   <p class="card__description">
                     Technocrack jest popularną platformą wykorzystywaną do
                     rozpowszechniania koronawirusa. Firmy wykorzystują tę
@@ -293,7 +284,7 @@
                   width="370"
                   height="294"
                 />
-                <div class="card__background">
+                <div class="card__overlay">
                   <p class="card__description">
                     Technocrack jest popularną platformą wykorzystywaną do
                     rozpowszechniania koronawirusa. Firmy wykorzystują tę
@@ -316,7 +307,7 @@
                   width="370"
                   height="294"
                 />
-                <div class="card__background">
+                <div class="card__overlay">
                   <p class="card__description">
                     Technocrack jest popularną platformą wykorzystywaną do
                     rozpowszechniania koronawirusa. Firmy wykorzystują tę
@@ -374,29 +365,45 @@
           <p class="footer__title title--section">Dołącz do nas</p>
           <ul class="social">
             <li class="social__box">
-              <a class="social__logo" href="#">
-                <svg class="social__svg" width="20" height="20">
+              <a class="social__logo social__logo--is-background" href="#">
+                <svg
+                  class="social__svg social__svg--light"
+                  width="20"
+                  height="20"
+                >
                   <use href="./images/icons.svg#icon--instagram"></use>
                 </svg>
               </a>
             </li>
             <li class="social__box">
-              <a class="social__logo" href="#">
-                <svg class="social__svg" width="20" height="20">
+              <a class="social__logo social__logo--is-background" href="#">
+                <svg
+                  class="social__svg social__svg--light"
+                  width="20"
+                  height="20"
+                >
                   <use href="./images/icons.svg#icon--twitter"></use>
                 </svg>
               </a>
             </li>
             <li class="social__box">
-              <a class="social__logo" href="#">
-                <svg class="social__svg" width="20" height="20">
+              <a class="social__logo social__logo--is-background" href="#">
+                <svg
+                  class="social__svg social__svg--light"
+                  width="20"
+                  height="20"
+                >
                   <use href="./images/icons.svg#icon--facebook"></use>
                 </svg>
               </a>
             </li>
             <li class="social__box">
-              <a class="social__logo" href="#">
-                <svg class="social__svg" width="20" height="20">
+              <a class="social__logo social__logo--is-background" href="#">
+                <svg
+                  class="social__svg social__svg--light"
+                  width="20"
+                  height="20"
+                >
                   <use href="./images/icons.svg#icon--linkedin"></use>
                 </svg>
               </a>
@@ -413,12 +420,9 @@
                 placeholder="E-mail"
                 type="email"
               />
-              <button
-                class="newsletter__button button--primary button__text--primary"
-                type="submit"
-              >
-                Zapisz się
-                <svg class="newsletter__svg" width="24px" height="24px">
+              <button class="button button--grid" type="submit">
+                <span class="button__text">Zapisz się</span>
+                <svg class="button__svg" width="24px" height="24px">
                   <use href="./images/icons.svg#icon-send"></use>
                 </svg>
               </button>
