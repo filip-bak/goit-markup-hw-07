@@ -11,7 +11,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/modern-normalize.css" />
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="./css/main.css" />
     <title>WebStudio</title>
   </head>
 
@@ -47,7 +47,7 @@
           </ul>
         </nav>
 
-        <ul class="contact__list">
+        <ul class="contact">
           <li class="contact__item">
             <a
               class="contact__link link--active link--no-decoration"
@@ -93,7 +93,7 @@
       </section>
 
       <!-- Skills -->
-      <section class="skills section section--top">
+      <section class="skill section section--top">
         <div class="container">
           <ul class="skill__list">
             <li class="skill__item">
@@ -382,7 +382,7 @@
       </section>
 
       <!-- Clients -->
-      <section class="clients section text-center">
+      <section class="client section text-center">
         <div class="client container">
           <h2 class="client__title title--secondary">Nasi klienci</h2>
           <ul class="client__list">
@@ -503,24 +503,22 @@
         </div>
         <div class="footer__item">
           <p class="footer__title title--section">Zapisz się do newslettera</p>
-          <form name="newsletter-form">
-            <div class="newsletter">
-              <input
-                class="newsletter__input"
-                name="newsletter-email"
-                placeholder="E-mail"
-                type="email"
-              />
-              <button
-                class="newsletter__button button--primary button__text--primary"
-                type="submit"
-              >
-                Zapisz się
-                <svg class="newsletter__svg" width="24px" height="24px">
-                  <use href="./images/icons.svg#icon-send"></use>
-                </svg>
-              </button>
-            </div>
+          <form class="newsletter" name="newsletter-form">
+            <input
+              class="newsletter__input"
+              name="newsletter-email"
+              placeholder="E-mail"
+              type="email"
+            />
+            <button
+              class="newsletter__button button--primary button__text--primary"
+              type="submit"
+            >
+              Zapisz się
+              <svg class="newsletter__svg" width="24px" height="24px">
+                <use href="./images/icons.svg#icon-send"></use>
+              </svg>
+            </button>
           </form>
         </div>
       </div>
@@ -581,14 +579,14 @@
                 id="comment"
                 class="form__comment"
                 rows="6"
-                placeholder="Wprowadź text"
+                placeholder="Wprowadź tekst"
               ></textarea>
             </li>
             <li class="form__item">
               <input
                 type="checkbox"
                 name="terms-and-conditions"
-                class="form__checkbox input--reset"
+                class="form__checkbox form__checkbox--reset"
                 id="terms"
                 value="true"
               />
