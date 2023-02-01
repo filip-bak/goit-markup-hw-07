@@ -143,12 +143,13 @@
 .newsletter {
     @include m.flexbox();
     flex-wrap: wrap;
+    width: 100%;
     gap: 12px;
 
     &__input {
-        width: 358px;
+        min-width: 358px;
         min-height: 50px;
-        padding-left: 16px;
+        padding-inline-start: 16px;
 
         color: var(--font-color-newsletter-footer);
         background-color: var(--bgcolor-newsletter-footer);
@@ -166,5 +167,11 @@
             border-color: var(--border-color-newsletter-input-footer);
             outline: 0;
         }
+        // need changes
+        // @include m.mq(small, max) {
+        //     & {
+        //         min-width: 290px;
+        //     }
+        // }
     }
 }

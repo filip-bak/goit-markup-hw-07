@@ -17,6 +17,14 @@
             margin-right: 78px;
         }
     }
+    // Need some changes
+    // @include m.mq(small, max) {
+    //     &__grid {
+    //         align-items: center;
+    //         justify-content: center;
+    //         text-align: center;
+    //     }
+    // }
 
     &__title {
         margin-bottom: 20px;

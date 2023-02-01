@@ -11,6 +11,7 @@
     }
     &__item {
         @include m.position(relative);
+        width: 370px;
     }
     &__background {
         @include m.position(absolute, $bottom: 0);
@@ -23,5 +24,12 @@
     &__subtitle {
         color: var(--font-color-about-us-title);
         text-transform: uppercase;
+    }
+    &__img {
+        width: 100%;
+        height: auto;
+
+        // width: 370px;
+        // height: 294px;
     }
 }

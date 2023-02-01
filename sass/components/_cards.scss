@@ -43,6 +43,10 @@
         position: relative;
         overflow: hidden;
     }
+    &__img {
+        width: 370px;
+        height: 294px;
+    }
     &__overlay {
         @include m.position(absolute, $top: 0, $bottom: 0);
 
